@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/delivery-service-micro-services-BE/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/delivery-service-micro-services-BE/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/delivery-service-micro-services-BE",
+  "projects": {
+    "delivery-service-micro-services-BE": {
+      "type": "application",
+      "root": "apps/delivery-service-micro-services-BE",
+      "entryFile": "main",
+      "sourceRoot": "apps/delivery-service-micro-services-BE/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/delivery-service-micro-services-BE/tsconfig.app.json"
+      }
+    },
+    "logging-service": {
+      "type": "application",
+      "root": "apps/logging-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/logging-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/logging-service/tsconfig.app.json"
+      }
+    },
+    "riders-service": {
+      "type": "application",
+      "root": "apps/riders-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/riders-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/riders-service/tsconfig.app.json"
+      }
+    }
+  }
+}
